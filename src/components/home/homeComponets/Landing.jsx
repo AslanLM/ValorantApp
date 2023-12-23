@@ -14,7 +14,7 @@ const Landing = () => {
           setCharacters(data.data.slice(0,1))
       }catch(error){
         console.log('diay papi no puedo?', error)
-      }
+      } 
     }
     fetchData();
   }, [])
