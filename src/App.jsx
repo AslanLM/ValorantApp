@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-   <BrowserRouter>
+   <BrowserRouter> {/*IMPORTANTE AGREGAR basename='/ValorantApp' ANTES DE DESPLEGAR QUE NO SE TE OLVIDE */}
 
    <Navbar/>
 

@@ -2,6 +2,42 @@
     flex: 1;
 }
 
+.home p{
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 8px;
+}
+
+.home a{
+    color: unset;
+    text-decoration: none;
+}
+
+.content-description{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    padding-top: 50px;
+    position: relative;
+}
+
+.content-description h1{
+    font-family: 'VALFont', serif;
+    font-size: 7em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+.content-description h2{
+    font-size: 1.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+
 /* landing page estilazos*/
 
 .landing-page {
@@ -13,6 +49,16 @@
     align-items: center;
     position: relative;
     overflow: hidden;
+}
+
+.border-detail{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
 }
 
 .border{
@@ -46,9 +92,10 @@
 
 .border2{
     position: absolute;
-    width: 70%;
-    height: 100vh;
-    z-index: 12;
+    bottom: 0;
+    width: 64%;
+    height: 10vh;
+    z-index: 9;
 }
 
 .border2::before{
@@ -84,15 +131,6 @@
     z-index: 9;
 }
 
-.last-detail{
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background-color: #fff;
-    clip-path: polygon(0 0, 0 100%, 100% 100%);
-}
 
 
 
@@ -121,7 +159,7 @@
     position: absolute;
     left: 23%;
     font-family: 'ValFont';
-    font-size: 8.4rem;
+    font-size: 9.4rem;
     font-weight: 500;
     color: #fff;
     z-index: 11;
@@ -130,45 +168,330 @@
 
 /* termina landing pages*/
 
-/* el navbar de home estilazos*/
+/* about estilazos*/
 
 
-.home-nav{
+.about{
     width: 100%;
-    height: 100vh;
-    padding: 0 119.2px;
+    height: 75vh;
     background-color: #fff;
     display: flex;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.ab-content{
+    display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 5em;
+    width: 85%;
+    height: 100%;
+    border-left: 1px solid #000;
+    padding: 24px;
+}
+
+
+.ab-title h1{
+    font-family: 'Valfont', serif;
+    font-size: 8em;
+    font-weight: 500;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.3);
+}
+
+.ab-title h1:nth-child(3){
+    color: #000;
+}
+
+
+.ab-description h2{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+
+.about-detail{
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #00002E;
+    clip-path: polygon(0 0, 0% 100%, 100% 100%);
+}
+
+
+
+/* agentes estilazos */
+
+.agents{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: -webkit-linear-gradient(to bottom, #00002E, #000154); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00002E, #000154);
+    position: relative;
+}
+
+.agt-content{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 5em;
+    width: 85%;
+    height: 100%;
+    color: #fff;
+    border-left: 1px solid #fff;
+    padding: 24px;
+}
+
+.agt-content::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 110px;
+    width: 20px;
+    height: 50px;
+    background-color: #00002E;
+}
+
+.agt-button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 72%;
+    left: 40%;
+    width: 274px;
+    height: 54px;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #fff;
+    transition: all 0.2s ease-in 0.15s;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.agt-button::before{
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 15%;
+    width: 30px;
+    height: 10px;
+    background-color: #000154;
+    transition: 0.3s ease-in;
+}
+
+.agt-button::after{
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 75%;
+    width: 30px;
+    height: 10px;
+    background-color: #000154;
+    transition: 0.3s ease-in;
+}
+
+.agt-button span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 85%;
+    background-color: #fff;
+    z-index: 11;
+}
+
+.agt-button span::before{
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 85%;
+    background-color: #000;
+    z-index: -1;
+    transition: 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.agt-button a{
+    font-family: 'ValFont', serif;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.agt-button:hover{
+    color: #fff;
+}
+
+.agt-button:hover::before{
+    left: 25%;
+}
+
+.agt-button:hover::after{
+    left: 65%;
+}
+
+.agt-button:hover span::before{
+    transform: scaleX(1);
+}
+
+.agt-img1 img{
+    display: inline-block;
+    position: absolute;
+    top: -90px;
+    right: 754px;
+    height: 120vh;
+    width: 135vh;
+    z-index: 10;
+}
+
+.agt-img2 img{
+    display: inline-block;
+    position: absolute;
+    top: -90px;
+    right: 400px;
+    height: 120vh;
+    width: 135vh;
+    z-index: 10;
+}
+
+
+/* maps */
+
+
+.maps{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 }
 
-.content-nav{
+.maps-content{
+    padding-top: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
+    gap: 5em;
+    width: 85%;
     height: 100%;
     border-left: 1px solid #000;
+    padding: 24px;
 }
 
-.content-nav::before{
+.maps-content::before{
     content: '';
     position: absolute;
-    top: 120px;
+    top: 500px;
     left: 110px;
     width: 20px;
     height: 50px;
     background-color: #fff;
 }
 
-.content-nav h1{
-    font-family: 'Valfont', serif;
-    font-size: 10em;
-    font-weight: 500;
+
+.maps-button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 72%;
+    left: 40%;
+    width: 274px;
+    height: 54px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in 0.15s;
+    cursor: pointer;
+    z-index: 10;
 }
+
+.maps-button::before{
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 15%;
+    width: 30px;
+    height: 10px;
+    background-color: #fff;
+    transition: 0.3s ease-in;
+}
+
+.maps-button::after{
+    content: '';
+    position: absolute;
+    top: 90%;
+    left: 75%;
+    width: 30px;
+    height: 10px;
+    background-color: #fff;
+    transition: 0.3s ease-in;
+}
+
+.maps-button span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 85%;
+    background-color: rgb(255, 48, 64);
+    z-index: 11;
+}
+
+.maps-button span::before{
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 85%;
+    background-color: #000;
+    z-index: -1;
+    transition: 0.5s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.maps-button a{
+    font-family: 'ValFont', serif;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+
+.maps-button:hover::before{
+    left: 25%;
+}
+
+.maps-button:hover::after{
+    left: 65%;
+}
+
+.maps-button:hover span::before{
+    transform: scaleX(1);
+}
+
+.map-img-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 48, 64);
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+}
+
+
+
+
+
+
+
+
 
 
 

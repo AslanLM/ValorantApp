@@ -1,32 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import Landing from '../home/homeComponets/Landing'
 import './Home.css'
-import HomeNav from './homeComponets/HomeNav'
+import About from './homeComponets/About'
+import AgentsHome from './homeComponets/AgentsHome'
+import MapsHome from './homeComponets/MapsHome'
 
 const Home = () => {
 
-  const [characters, setCharacters] = useState([])
-
-
-  useEffect(()=>{
-    const fetchData = async ()=>{
-      try{
-        const response = await fetch('https://valorant-api.com/v1/agents');
-          const data = await response.json();
-          setCharacters(data.data.slice(0,2))
-      }catch(error){
-        console.log('diay papi no puedo?', error)
-      }
-    }
-    fetchData();
-  }, [])
-
-
   return (
     <main className='home'>    
-        <Landing />
+        <Landing characterId='e370fa57-4757-3604-3648-499e1f642d3f'/>
 
-        <HomeNav/>
+        <About/>
+
+        <AgentsHome/>
+
+        <MapsHome mapId='7eaecc1b-4337-bbf6-6ab9-04b8f06b3319'/>
     </main>
   )
 }

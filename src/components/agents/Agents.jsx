@@ -1,8 +1,9 @@
 import React from 'react'
+import './Agents.css'
 
 const Agents = () => {
   return (
-    <div>Agents</div>
+    <div className='kekwtexto'>Que se te perdio Aqui?</div>
   )
 }
 
