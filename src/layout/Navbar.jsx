@@ -1,10 +1,33 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Layout.css";
 
 const Navbar = () => {
+
+  const [header, setHeader] = useState(false);
+
+  useEffect(() => {
+    const headerScroll = () => {
+      if(window.scrollY > 115 * window.innerHeight / 100){
+        setHeader(true)
+      }else{
+        setHeader(false)
+      }
+    };
+
+    window.addEventListener("scroll", headerScroll);
+
+    return () => {
+      window.removeEventListener("scroll", headerScroll);
+    };
+  }, []); 
+
+
+
+
+ /* responsive aun no lo ocupo
+ 
   const [clicked, setClicked] = useState(false);
-  const [navbar, setNavbar] = useState(false);
 
   const handleClicked=()=>{
     setClicked((prevClicked) => !prevClicked);
@@ -13,12 +36,12 @@ const Navbar = () => {
   const handleClickedLinks=()=>{
     setClicked(false)
   }
-
+*/
 
   return (
-    <header id="header" className="header header-hidden">
+    <header id="header" className={`header ${header ? "scrolled" : ""}`}>
       <div className="logo" >
-        <NavLink to="/" className="active" onClick={handleClickedLinks}>
+        <Link to="/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -29,41 +52,38 @@ const Navbar = () => {
             <path d="M99.25 48.66V10.28c0-.59-.75-.86-1.12-.39l-41.92 52.4a.627.627 0 00.49 1.02h30.29c.82 0 1.59-.37 2.1-1.01l9.57-11.96c.38-.48.59-1.07.59-1.68zM1.17 50.34L32.66 89.7c.51.64 1.28 1.01 2.1 1.01h30.29c.53 0 .82-.61.49-1.02L1.7 9.89c-.37-.46-1.12-.2-1.12.39v38.38c0 .61.21 1.2.59 1.68z" fill="#fff">
             </path>
           </svg>
-        </NavLink>
+        </Link>
       </div>
 
-      <button
-        id="menuButton"
-        className={clicked ? "clicked" : ""}
-        onClick={handleClicked}
-      >
-        <div></div>
-        <div></div>
-      </button>
 
-      <nav id="navbar" style={{ display: clicked ? 'flex' : 'none' }}>
+      <nav id="navbar">
         <ul>
           <li>
-            <NavLink to="/home" className="active" onClick={handleClickedLinks}>
+            <NavLink to="/home" >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to="/agents" className="active" onClick={handleClickedLinks}>
+            <NavLink to="/agents" >
               Agents
             </NavLink>
           </li>
           <li>
-            <NavLink to="/maps" className="active" onClick={handleClickedLinks}>
+            <NavLink to="/maps" >
               Maps
             </NavLink>
           </li>
           <li>
-            <NavLink to="/weapons" className="active" onClick={handleClickedLinks}>
+            <NavLink to="/weapons" >
               Weapons
             </NavLink>
           </li>
         </ul>
+        <span>  
+            <Link to="/weapons" >
+              ValorantAPI
+            </Link>
+        </span>   
       </nav>
     </header>
   );
