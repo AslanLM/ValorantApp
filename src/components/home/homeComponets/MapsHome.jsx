@@ -1,51 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useRef } from 'react'
 
-const MapsHome = ({mapId}) => {
+const MapsHome = ({maps}) => {
 
-    const [ map, setMap] = useState([])
+    const mapRef = useRef(null)
 
-    
-  useEffect(()=>{
-    const fetchData = async ()=>{
-      try{
-        const response = await fetch(`https://valorant-api.com/v1/maps/${mapId}`);
-          const data = await response.json();
-          setMap(data.data)
-      }catch(error){
-        console.log('diay papi no puedo?', error)
-      } 
-    }
-    fetchData();
-  }, [mapId])
+      return (
+        <div className='maps' ref={mapRef}> 
+              
+          {maps.length > 0 && (
+              <div className='map-img' key={maps[0].uuid}>
+              <img src={maps[0].splash} alt={maps[0].displayName} />
+              </div>
+          )}
 
-
-  return (
-    <section className='maps'> 
-    <div className='maps-content'>
-        <div className='content-description'>
-            <h1>your <br/>maps</h1>
-            <h2>Fight around the world</h2>
-            <p>
-            Each map is a battlefield to showcase your creative thinking. They are specially designed for team strategies, spectacular plays, and moments to come back. Make the move that others will imitate in the future.
-            </p>
-            <div className='maps-button'>
-                <span>
-                    <NavLink to='/maps'>All Maps</NavLink>
-                </span>
-            </div>
+        <div className='home-cont-title'>
+          <h1>All Maps</h1>
         </div>
-        <div className='map-img-container'>
-            
-            {map && (
-                <div className='map-img-banner' key={map.uuid}>
-                <img src={map.splash} alt={map.displayName} />
-                </div>
-            )}
+        
         </div>
-    </div>
-    </section>
-  )
+      )
 }
 
 export default MapsHome

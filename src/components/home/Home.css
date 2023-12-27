@@ -42,13 +42,16 @@
 
 .landing-page {
     width: 100%;
-    height: 126vh;
+    height: 110vh;
     background-color: #0F1722;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
+
+
 
 .border-detail{
     position: absolute;
@@ -63,7 +66,7 @@
 .border{
     position: absolute;
     width: 85%;
-    height: 126vh;
+    height: 110vh;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
     z-index: 12;
@@ -135,7 +138,7 @@
 
 .img-banner{
     position: absolute;
-    top: -172px;
+    top: -55px;
     left: 175px;
     z-index: 10;
 }
@@ -154,7 +157,7 @@
 
 .img-banner2 img{
     height: 200vh;
-    width: 215vh;
+    width: 226vh;
     opacity: 0.1;
 }
 
@@ -175,326 +178,306 @@
 
 /* termina landing pages*/
 
-/* about estilazos*/
+/* contenido del home */
 
-
-.about{
-    width: 100%;
-    height: 80vh;
-    background-color: #fff;
+.home-content{
     display: flex;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    
-}
-
-.ab-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5em;
-    width: 85%;
-    height: 100%;
-    border-left: 1px solid #000;
-    padding: 24px;
-}
-
-
-.ab-title h1{
-    font-family: 'Valfont', serif;
-    font-size: 8em;
-    font-weight: 500;
-    color: transparent;
-    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.3);
-}
-
-.ab-title h1:nth-child(3){
-    color: #000;
-}
-
-
-.ab-description h2{
-    font-size: 2em;
-    font-weight: 700;
-}
-
-
-.about-detail{
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background-color: #00002E;
-    clip-path: polygon(0 0, 0% 100%, 100% 100%);
-}
-
-
-
-/* agentes estilazos */
-
-.agents{
-    width: 100%;
+    gap: 10px;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    background: -webkit-linear-gradient(to bottom, #00002E, #000154); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #00002E, #000154);
-    position: relative;
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    margin-bottom: 40px;
 }
 
-.agt-content{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 5em;
-    width: 85%;
+.home-content a{
+    flex: 1;
+}
+
+
+.img-content{
+    flex: 1;
+    width: 100%;
     height: 100%;
-    color: #fff;
-    border-left: 1px solid #fff;
-    padding: 24px;
-}
-
-.agt-content::before{
-    content: '';
-    position: absolute;
-    top: 60px;
-    left: 110px;
-    width: 20px;
-    height: 50px;
-    background-color: #00002E;
-}
-
-.agt-button{
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 72%;
-    left: 40%;
-    width: 274px;
-    height: 54px;
-    background-color: transparent;
-    color: #000;
-    border: 1px solid #fff;
-    transition: all 0.2s ease-in 0.15s;
-    cursor: pointer;
-    z-index: 10;
 }
 
-.agt-button::before{
+.img-content::before {
     content: '';
+    width: 80px;
+    height: 25px;
     position: absolute;
-    top: -10%;
-    left: 15%;
-    width: 30px;
-    height: 10px;
-    background-color: #000154;
-    transition: 0.3s ease-in;
+    bottom: 100px;
+    left: 80px;
+    background-color: #EAEDB5;
+    transform: rotate(45deg);
+    z-index: 1;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
-.agt-button::after{
+.img-content::after {
+    content: '';
+    width: 80px;
+    height: 25px;
+    position: absolute;
+    bottom: 100px;
+    right: 80px;
+    background-color: #EAEDB5;
+    transform: rotate(315deg);
+    z-index: 1;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.img-border{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 67%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: none;
+}
+
+.img-border::before {
     content: '';
     position: absolute;
     top: 90%;
-    left: 75%;
-    width: 30px;
-    height: 10px;
-    background-color: #000154;
-    transition: 0.3s ease-in;
+    left: 124px;
+    width: 1px;
+    height: 336px;
+    transform: rotate(313deg);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.agt-button span{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-    height: 85%;
-    background-color: #fff;
-    z-index: 11;
-}
-
-.agt-button span::before{
+.img-border::after{
     content: '';
     position: absolute;
-    width: 95%;
-    height: 85%;
-    background-color: #000;
-    z-index: -1;
-    transition: 0.5s ease;
-    transform: scaleX(0);
-    transform-origin: left;
+    top: 90%;
+    right: 124px;
+    width: 1px;
+    height: 336px;
+    transform: rotate(47deg);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.agt-button a{
-    font-family: 'ValFont', serif;
-    font-size: 1.2em;
-    font-weight: 700;
-}
 
-.agt-button:hover{
-    color: #fff;
-}
-
-.agt-button:hover::before{
-    left: 25%;
-}
-
-.agt-button:hover::after{
-    left: 65%;
-}
-
-.agt-button:hover span::before{
-    transform: scaleX(1);
-}
-
-.agt{
+.bg-logo{
     position: absolute;
-    top: -60px;
-    z-index: 10;
+    width: 97%;
+    height: 97%;
+    background-color: linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
+    background: -webkit-linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 66%);
 }
 
-.agt-img1{
-    right: 24%;
+.agent-content{
+    height: 97%;
+    width: 97%;
 }
 
-.agt-img2{
-    right: 48%;
+.map-content{
+    height: 97%;
+    width: 97%;
 }
+
+.weapon-content{
+    height: 97%;
+    width: 97%;
+}
+
+.home-cont-title {
+    display: flex;
+    justify-content: center;
+    width: 84%;
+    position: absolute;
+    bottom: 23%;
+    transition: transform 0.3s ease;
+    z-index: 3;
+    background-color: #EAEDB5;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+}
+
+.home-cont-title h1{
+    font-family: 'Valfont', serif;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #160202;
+}
+
+.img-detail-cir{
+    position: absolute;
+    bottom: -12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* agents*/
+
+.agents{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.agents:hover {
+    overflow: visible;
+}
+
 
 .agt-img1 img{
-    height: 120vh;
-    width: 135vh;
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    width: 100vh;
+    height: 100vh;
+    transition: transform 0.3s ease;
+    z-index: 2;
 }
 
+.agt-img2 img {
+    position: absolute;
+    bottom: -27px;
+    left: -12%;
+    width: 100vh;
+    height: 100vh;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
 
-.agt-img2 img{
-    height: 120vh;
-    width: 135vh;
+.agents:hover .agt-img1 img,
+.agents:hover .agt-img2 img,
+.agents:hover .home-cont-title h1{
+    transform: scale(1.05);
+    transition: transform 0.3s ease; 
 }
 
 
 /* maps */
 
-
 .maps{
-    width: 100%;
-    height: 100vh;
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
-}
-
-.maps-content{
-    padding-top: 100px;
-    display: flex;
-    align-items: center;
-    gap: 5em;
-    width: 85%;
-    height: 100%;
-    border-left: 1px solid #000;
-    padding: 24px;
-}
-
-.maps-content::before{
-    content: '';
-    position: absolute;
-    top: 500px;
-    left: 110px;
-    width: 20px;
-    height: 50px;
-    background-color: #fff;
-}
-
-
-.maps-button{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 72%;
-    left: 40%;
-    width: 274px;
-    height: 54px;
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    transition: all 0.2s ease-in 0.15s;
     cursor: pointer;
-    z-index: 10;
+    
 }
 
-.maps-button::before{
-    content: '';
-    position: absolute;
-    top: -10%;
-    left: 15%;
-    width: 30px;
-    height: 10px;
-    background-color: #fff;
-    transition: 0.3s ease-in;
-}
-
-.maps-button::after{
-    content: '';
-    position: absolute;
-    top: 90%;
-    left: 75%;
-    width: 30px;
-    height: 10px;
-    background-color: #fff;
-    transition: 0.3s ease-in;
-}
-
-.maps-button span{
+.map-img{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
-    height: 85%;
-    background-color: rgb(255, 48, 64);
-    z-index: 11;
-}
-
-.maps-button span::before{
-    content: '';
-    position: absolute;
-    width: 95%;
-    height: 85%;
-    background-color: #000;
-    z-index: -1;
-    transition: 0.5s ease;
-    transform: scaleX(0);
-    transform-origin: left;
-}
-
-.maps-button a{
-    font-family: 'ValFont', serif;
-    font-size: 1.2em;
-    font-weight: 700;
 }
 
 
-.maps-button:hover::before{
-    left: 25%;
-}
-
-.maps-button:hover::after{
-    left: 65%;
-}
-
-.maps-button:hover span::before{
-    transform: scaleX(1);
-}
-
-.map-img-container{
+.map-img img{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 48, 64);
-    clip-path: polygon(70% 0, 100% 0, 100% 100%, 30% 100%);
+    transition: transform 0.3s ease;
+    clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 66%);
+}
+
+.maps:hover {
+    overflow: visible;
+}
+
+
+.maps:hover .map-img img{
+    transform: scale(1.01);
+    transition: transform 0.3s ease; 
+}
+
+.maps:hover .home-cont-title{
+    transform: scale(1.03);
+    transition: transform 0.3s ease; 
+}
+
+/* weapons */
+
+.weapons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wp-img1,
+.wp-img2,
+.wp-img3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wp-img0 img{
+    position: absolute;
+    left: 20%;
+    top: 8%;
+    height: 190px;
+    width: 320px;
+    transform: rotate(340deg);
+    transition: transform 0.3s ease; 
+}
+
+.wp-img1 img{
+    position: absolute;
+    top: 36%;
+    height: 90px;
+    width: 320px;
+    transform: rotate(354deg);
+    transition: transform 0.3s ease; 
+}
+
+.wp-img2 img{
+    position: absolute;
+    top: 54%;
+    left: 2%;
+    height: 148px;
+    width: 492px;
+    transform: rotate(340deg);
+    transition: transform 0.3s ease; 
+}
+
+
+.weapons:hover {
+    overflow: visible;
+}
+
+.weapons:hover .wp-img0 img{
+    transform: rotate(350deg) scale(1.05);
+    transition: transform 0.3s ease; 
+}
+
+.weapons:hover .wp-img1 img{
+    transform: rotate(364deg) scale(1.05);
+    transition: transform 0.3s ease; 
+}
+
+.weapons:hover .wp-img2 img{
+    transform: rotate(350deg) scale(1.05);
+    transition: transform 0.3s ease; 
+}
+
+.weapons:hover .home-cont-title h1{
+    transform: scale(1.05);
+    transition: transform 0.3s ease; 
 }
 
 

@@ -40,7 +40,7 @@ const Landing = ({characterId}) => {
       const movement = (layer.offsetHeight * speed)
       tl.to(layer, {
         y: movement,
-        ease: 'none',
+        ease: 'ease-in',
       }, 0)
     })
   }
@@ -70,7 +70,7 @@ const Landing = ({characterId}) => {
       )}
 
       {character && (
-        <div id='layer' className='img-banner2' data-speed='0.5' key={`${character.uuid}-background`}>
+        <div id='layer' className='img-banner2' data-speed='0.3' key={`${character.uuid}-background`}>
           <img src={character.background} alt={character.displayName}  onLoad={handleImgLoad}/>
         </div>
       )}
