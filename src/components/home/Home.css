@@ -711,9 +711,9 @@
 
     .agt-img1 img,
     .agt-img2 img{
-        bottom: 0;
-        left: -85%;
-        width: 48vh;       
+        bottom: 10%;
+        left: -105%;
+        width: 65vh;
     }
     
     .wp-img0 img{
@@ -733,15 +733,6 @@
     }    
 }
 
-
-@media screen and (max-width: 340px){
-    .agt-img1 img,
-    .agt-img2 img{
-        bottom: 0;
-        left: -122%;
-        width: 46vh;  
-    }
-}
 
 
 
