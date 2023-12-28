@@ -45,7 +45,8 @@ const Home = () => {
         <section className='home-content'>
           <NavLink to='/agents'>
             <div className='img-content'>
-              <div className='img-border'></div>
+              <div className='border-top'></div>
+              <div className='border-bottom'></div>
               <div className='bg-logo'></div>
               <div className='agent-content'>          
                 <AgentsHome characters={characters} />
@@ -56,7 +57,8 @@ const Home = () => {
 
           <NavLink to='/maps'>
             <div className='img-content'>
-              <div className='img-border'></div>
+              <div className='border-top'></div>
+              <div className='border-bottom'></div>
               <div className='bg-logo'></div>
               <div className='map-content'>
                 <MapsHome maps={maps} />
@@ -67,7 +69,8 @@ const Home = () => {
 
           <NavLink to='/weapons'>
             <div className='img-content'>
-              <div className='img-border'></div>
+              <div className='border-top'></div>
+              <div className='border-bottom'></div>
               <div className='bg-logo'></div>
               <div className='weapon-content'>
                 <WeaponsHome weapons={weapons} />

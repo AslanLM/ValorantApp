@@ -38,6 +38,22 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    .content-description {
+        width: 100%;
+        max-width: none; /* Eliminar el ancho máximo en pantallas más pequeñas */
+    }
+
+    .content-description h1 {
+        font-size: 3em;
+    }
+
+    .content-description h2 {
+        font-size: 1.2em;
+    }
+}
+
+
 /* landing page estilazos*/
 
 .landing-page {
@@ -52,13 +68,12 @@
 }
 
 
-
 .border-detail{
     position: absolute;
-    bottom: 0;
+    bottom: -1%;
     left: 0;
-    width: 80px;
-    height: 80px;
+    width: 5%;
+    height: 10%;
     background-color: #fff;
     clip-path: polygon(0 0, 0% 100%, 100% 100%);
 }
@@ -75,20 +90,20 @@
 .border::before{
     content: '';
     position: absolute;
-    top: 144px;
-    left: -10px;
-    width: 20px;
-    height: 50px;
+    top: 20%;
+    left: -1%;
+    width: 2%;
+    height: 6%;
     background-color: #0F1722;
 }
 
 .border::after{
     content: '';
     position: absolute;
-    bottom: 80px;
-    right: -10px;
-    width: 20px;
-    height: 50px;
+    bottom: 15%;
+    right: -1%;
+    width: 2%;
+    height: 6%;
     background-color: rgb(255, 51, 66);
 }
 
@@ -102,26 +117,23 @@
     z-index: 9;
 }
 
-.border2::before{
+.border2::before,
+.border2::after {
     content: '';
     position: absolute;
-    bottom: 20px;
-    right: -10px;
-    width: 15px;
-    height: 15px;
+    bottom: 2%;
+    width: 2%;
+    height: 20%;
     background-color: #fff;
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
-.border2::after{
-    content: '';
-    position: absolute;
-    bottom: 80px;
-    left: -10px;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+.border2::before {
+    right: -1%; 
+}
+
+.border2::after {
+    left: -1%; 
 }
 
 .banner{
@@ -138,8 +150,8 @@
 
 .img-banner{
     position: absolute;
-    top: -55px;
-    left: 175px;
+    top: -10%;
+    left: 14%;
     z-index: 10;
 }
 
@@ -152,12 +164,12 @@
 .img-banner2{
     position: absolute;
     top: -45%;
-    left: -150px;
+    left: -10%;
 }
 
 .img-banner2 img{
     height: 200vh;
-    width: 226vh;
+    width: 154%;
     opacity: 0.1;
 }
 
@@ -174,6 +186,84 @@
     font-weight: 500;
     color: #fff;
 }
+
+@media screen and (max-width: 1024px){
+
+    .img-banner{
+        left: unset;
+    }
+    .img-banner img{
+        width: 150vh;
+    }
+
+    .title {
+        left: unset;
+    }
+
+    .title h1 {
+        font-size: 7rem; 
+    }
+}
+
+
+@media screen and (max-width: 768px){
+
+
+    .landing-page{
+        height: 100vh;
+    }
+
+    .banner{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 100%);
+    }
+
+    .border-detail{
+        display: none;
+    }
+   
+    .border2 {
+        width: 60%;
+    }
+
+    .img-banner {
+        top: 5%;
+        left: -8%;
+    }
+
+    .img-banner img{
+        width: 120vh;
+    }
+
+
+    .title {
+        left: unset;
+    }
+
+    .title h1 {
+        font-size: 5rem; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .img-banner {
+        top: 5%;
+        left: unset;
+    }
+
+    .img-banner img{
+        width: 105vh;
+    }
+
+
+    .title {
+        left: 14%;
+    }
+
+    .title h1 {
+        font-size: 4rem; 
+    }
+}
+
 
 
 /* termina landing pages*/
@@ -206,11 +296,11 @@
 
 .img-content::before {
     content: '';
-    width: 80px;
-    height: 25px;
+    width: 15%;
+    height: 3.7%;
     position: absolute;
-    bottom: 100px;
-    left: 80px;
+    bottom: 14.2%;
+    left: 16%;
     background-color: #EAEDB5;
     transform: rotate(45deg);
     z-index: 1;
@@ -219,18 +309,18 @@
 
 .img-content::after {
     content: '';
-    width: 80px;
-    height: 25px;
+    width: 15%;
+    height: 3.7%;
     position: absolute;
-    bottom: 100px;
-    right: 80px;
+    bottom: 14.2%;
+    right: 16%;
     background-color: #EAEDB5;
     transform: rotate(315deg);
     z-index: 1;
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 25% 100%);
 }
 
-.img-border{
+.border-top{
     position: absolute;
     top: 0;
     width: 100%;
@@ -239,27 +329,16 @@
     border-bottom: none;
 }
 
-.img-border::before {
-    content: '';
+.border-bottom{
     position: absolute;
-    top: 90%;
-    left: 124px;
-    width: 1px;
-    height: 336px;
-    transform: rotate(313deg);
-    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    width: 100%;
+    height: 33%;
+    background-color:  rgba(0, 0, 0, 0.5);
+    clip-path: polygon(50% 98%, 100% 0%, 50% 100%, 50% 100%, 0 0%);
 }
 
-.img-border::after{
-    content: '';
-    position: absolute;
-    top: 90%;
-    right: 124px;
-    width: 1px;
-    height: 336px;
-    transform: rotate(47deg);
-    background-color: rgba(0, 0, 0, 0.5);
-}
+
 
 
 .bg-logo{
@@ -295,7 +374,7 @@
     transition: transform 0.3s ease;
     z-index: 3;
     background-color: #EAEDB5;
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    clip-path: polygon(0 0, 100% 0, 91% 100%, 9% 100%);
 }
 
 .home-cont-title h1{
@@ -307,12 +386,98 @@
 
 .img-detail-cir{
     position: absolute;
-    bottom: -12px;
+    bottom: -21px;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
+
+.img-detail-cir::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 8px;
+    left: -1.2px;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    transform: rotate(315deg);
+}
+
+@media screen and (max-width: 1024px){
+
+    .home-content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .img-content::before,
+    .img-content::after{
+        height: 2.5%;
+    }
+    .img-content::before{
+        left: 18%;
+        transform: rotate(60deg);
+    }
+    .img-content::after{
+        right: 18%;
+        transform: rotate(300deg);
+    }
+
+    .bg-logo{
+        display: none;
+    }
+
+    .home-cont-title h1{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+    .home-content{
+        flex-direction: column;
+        height: 200vh;
+        padding: 40px 20px 20px 20px;
+        gap: 25px;
+    }
+
+    .img-content::before{
+        top: 30%;
+        left: -8.5%;
+        transform: rotate(90deg);
+    }
+
+    .img-content::after{
+        top: 30%;
+        right: -8.5%;
+        transform: rotate(90deg);
+    }
+
+    .img-border::before{
+        top: 70%;
+        height: 108%;
+        transform: rotate(296deg)
+
+    }
+    .img-border::after{
+        top: 70%;
+        height: 108%;
+        transform: rotate(64deg);
+    }
+
+    .bg-logo{
+        display: block;
+    }
+
+    .home-cont-title{
+        clip-path: polygon(-2% 0%, 102% 0%, 91% 100%, 9% 100%);
+    }
+
+}
+
+
 
 
 
@@ -372,6 +537,7 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 66%);
     
 }
 
@@ -384,24 +550,17 @@
 
 .map-img img{
     position: absolute;
-    width: 100%;
+    width: 200%;
     height: 100%;
     transition: transform 0.3s ease;
-    clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 66%);
-}
-
-.maps:hover {
-    overflow: visible;
 }
 
 
-.maps:hover .map-img img{
-    transform: scale(1.01);
-    transition: transform 0.3s ease; 
-}
 
+
+.maps:hover .map-img img,
 .maps:hover .home-cont-title{
-    transform: scale(1.03);
+    transform: scale(1.05);
     transition: transform 0.3s ease; 
 }
 
@@ -430,8 +589,8 @@
     position: absolute;
     left: 20%;
     top: 8%;
-    height: 190px;
-    width: 320px;
+    height: 25%;
+    width: 60%;
     transform: rotate(340deg);
     transition: transform 0.3s ease; 
 }
@@ -439,8 +598,8 @@
 .wp-img1 img{
     position: absolute;
     top: 36%;
-    height: 90px;
-    width: 320px;
+    height: 14%;
+    width: 55%;
     transform: rotate(354deg);
     transition: transform 0.3s ease; 
 }
@@ -449,8 +608,8 @@
     position: absolute;
     top: 54%;
     left: 2%;
-    height: 148px;
-    width: 492px;
+    height: 25%;
+    width: 100%;
     transform: rotate(340deg);
     transition: transform 0.3s ease; 
 }
@@ -481,9 +640,126 @@
 }
 
 
+@media screen and (max-width: 1024px){
+
+    .agents,
+    .weapons{
+        background-color: linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
+        background: -webkit-linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 66%);
+    }
+
+    .agt-img1 img{
+        bottom: 10%;
+        left: -64%;
+        width: 90vh;
+        height: 100%;
+    }
+    
+    .agt-img2 img{
+        bottom: 10%;
+        left: -29%;
+        width: 90vh;
+        height: 100%;
+    }
+
+    .wp-img0 img{
+        left: 15%;
+    }
+
+    .wp-img1 img{
+        top: 32%
+    }
+
+    .wp-img2 img{
+        left: 5%;
+    }    
+}
 
 
+@media screen and (max-width: 768px){
 
+    .agents,
+    .weapons{
+        background-color: transparent;
+        background: transparent;
+        clip-path: none;
+    }
+
+     
+    .agt-img1 img{
+        bottom: 10%;
+        left: -22%;
+        width: 90vh;
+        height: 100%;
+    }
+    
+    .agt-img2 img{
+        bottom: 10%;
+        left: 22%;
+        width: 90vh;
+        height: 100%;
+    }
+
+    .wp-img0 img{
+        height: 35%;
+        width: 45%;
+        top: 10%;
+        left: 5%;
+    }
+
+    .wp-img1 img{
+        height: 20%;
+        width: 30%;
+        top: 7%;
+        left: 55%;
+    }
+
+    .wp-img2 img{
+        height: 30%;
+        width: 75%;
+        top: 42%;
+        left: 12%;
+    }    
+}
+
+
+@media screen and (max-width: 480px){
+
+
+    .agt-img1 img{
+        bottom: 8%;
+        left: -45%;
+        width: 90vh;
+        height: 105%;
+    }
+    
+    .agt-img2 img{
+        bottom: 8%;
+        left: 0%;
+        width: 90vh;
+        height: 105%;
+    }
+
+    .wp-img0 img{
+        top: 8%;
+        left: 10%;
+    }
+
+    .wp-img1 img{
+        width: 40%;
+        height: 20%;
+        top: 8%;
+        left: 55%;
+    }
+
+    .wp-img2 img{
+        width: 100%;
+        height: 32%;
+        top: 45%;
+        left: 0%;
+    }    
+}
 
 
 

@@ -7,7 +7,7 @@
   margin-bottom: 10px;
   justify-content: space-around;
   align-items: center;
-  gap: 36em;
+  gap: 40%;
   position: fixed;
   top: 0;
   z-index: 999;
@@ -130,7 +130,17 @@
   background-color: #000;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+      gap: 0;
+      padding: 10px; 
+  }
 
+  #navbar li {
+      font-size: 1.5rem; 
+      padding: 0; 
+  }
+}
 
 
 
