@@ -1,8 +1,66 @@
-.kekwtexto{
-    padding: 100px;
-    font-family: 'ValFont', serif;
-    font-size: 10em;
-    font-weight: 400;
-    background-color: #000;
-    color: #fff;
+.agents-sc{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8vh;
+    width: 100%;
+    height: 110vh;
 }
+
+.agents-sc-content{
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+
+.agents-sc-info{
+    flex: 0.8;
+    background-color: green;
+}
+
+.agents-sc-cards{
+    flex: 1.5;
+    background-color: red;
+}
+
+.agents-sc-habilities{
+    flex: 1;
+    background-color: blue;
+}
+
+
+/* navbar de agents */
+
+.agents-nav{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.slider-agents {
+    display: flex !important;
+    align-items: flex-end;
+    width: 85% !important; 
+    height: 22vh;
+    background-color: rgb(255, 51, 66);
+    padding: 10px;
+    padding-bottom: 0;
+    border-radius: 8px; 
+    margin: 0 10px; 
+  }
+
+.slider-agents img{
+    width: 20vh;
+    height: auto;
+}
+
+
+.slick-prev::before,
+.slick-next::before{
+    color: rgb(255, 51, 66) !important;
+}
+
+.slick-prev::before:hover,
+.slick-next::before:hover{
+    color: rgb(255, 51, 66) !important;
+}
+

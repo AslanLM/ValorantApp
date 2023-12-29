@@ -5,6 +5,7 @@ import AgentsHome from './homeComponets/AgentsHome'
 import MapsHome from './homeComponets/MapsHome'
 import WeaponsHome from './homeComponets/WeaponsHome'
 import { NavLink } from 'react-router-dom'
+import ClipPathVal from './ClipPathVal'
 
 const Home = () => {
 
@@ -47,7 +48,8 @@ const Home = () => {
             <div className='img-content'>
               <div className='border-top'></div>
               <div className='border-bottom'></div>
-              <div className='bg-logo'></div>
+              <div className='bg-outside'></div>
+              <ClipPathVal/>
               <div className='agent-content'>          
                 <AgentsHome characters={characters} />
               </div>
@@ -59,7 +61,7 @@ const Home = () => {
             <div className='img-content'>
               <div className='border-top'></div>
               <div className='border-bottom'></div>
-              <div className='bg-logo'></div>
+              <div className='bg-outside'></div>
               <div className='map-content'>
                 <MapsHome maps={maps} />
               </div>
@@ -71,7 +73,8 @@ const Home = () => {
             <div className='img-content'>
               <div className='border-top'></div>
               <div className='border-bottom'></div>
-              <div className='bg-logo'></div>
+              <div className='bg-outside'></div>
+              <ClipPathVal/>
               <div className='weapon-content'>
                 <WeaponsHome weapons={weapons} />
               </div>
