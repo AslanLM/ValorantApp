@@ -1,15 +1,15 @@
 .agents-sc{
     display: flex;
     flex-direction: column;
-    margin-top: 6vh;
+    margin-top: 2vh;
     width: 100%;
-    height: 115vh;
+    height: 110vh;
 }
 
 .agents-sc-content{
     display: flex;
     width: 100%;
-    height: 76%;
+    height: 75%;
     border-bottom: 1px solid #000;
 }
 
@@ -36,8 +36,9 @@
 
 .agents-nav{
     width: 90%;
+    height: 25%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
 .slider-agents {
@@ -189,9 +190,9 @@
 }
 
 .abilities-info img{
-    height: 18vh;
+    height: 15vh;
     width: auto;
-    filter: invert(37%) sepia(52%) saturate(5294%) hue-rotate(336deg) brightness(99%) contrast(107%);
+    filter: invert(32%) sepia(44%) saturate(7014%) hue-rotate(340deg) brightness(106%) contrast(101%);
 }
 
 
@@ -204,15 +205,15 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60%;
+    height: 75%;
     border-bottom: 1px solid #000;
 }
 
 
 .empty-banner .bg-inside {
     position: absolute;
-    width: 65%;
-    height: 70%;
+    width: 55%;
+    height: 75%;
     top: unset;
     left: unset;
 }

@@ -93,7 +93,7 @@
 }
 
 #menuButton > div:first-child{
-  width: 80%;
+  width: 100%;
   }
   
 #menuButton > div:last-child{
@@ -102,7 +102,6 @@
   
 #menuButton:hover div:first-child{
   transform: translateY(5px);
-  width: 100%;
 }
   
 #menuButton:hover div:last-child{

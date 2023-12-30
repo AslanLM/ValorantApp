@@ -1,1 +1,79 @@
+.maps-sc{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.maps-info{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    height: 100%;
+    width: 20%;
+    padding: 0 10px;
+}
+
+.maps-info-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+}
+
+.maps-info h1{
+    font-family: 'Tungsten', serif;
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.maps-info p{
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+
+.maps-sc-content{
+    flex: 1;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15vh 3%;
+}
+
+.slider-map{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+    width: 95% !important;
+    height: 70vh;
+    padding: 0 10px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.slider-map img{
+    height: 70vh;
+    width: auto;
+}
+
+.icon-map{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    right: 5%;
+    z-index: 2;
+}
+
+.icon-map img{
+    height: 20vh;
+    width: auto;
+    z-index: 2;
+}
+
+
 

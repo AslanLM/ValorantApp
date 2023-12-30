@@ -80,7 +80,7 @@
 
 .bg-weapons-sc{
     height: 100%;
-    width: 50%;
+    width: 30%;
     background-color: rgba(0, 0, 0, 0.5);
     clip-path: polygon(0 0, 0% 100%, 2% 100%);
 }

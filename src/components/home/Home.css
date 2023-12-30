@@ -489,10 +489,12 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 66%);
 }
 
 .agents:hover {
     overflow: visible;
+    clip-path: none;
 }
 
 .agt-img1,
@@ -637,13 +639,6 @@
 
 
 @media screen and (max-width: 1024px){
-
-    .agents,
-    .weapons{
-        background-color: linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
-        background: -webkit-linear-gradient(135deg, rgb(255, 51, 66) 0%, rgb(255, 48, 64) 0.01%, rgb(255, 125, 102) 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 66%, 50% 100%, 0 66%);
-    }
 
     .agt-img1 img,
     .agt-img2 img{

@@ -21,9 +21,6 @@ const Weapons = () => {
     fetchData();
   }, [])
 
-  console.log(weapons)
-
-  
   return (
     <div className='weapons-sc'>
       <div className='weapons-info'>
