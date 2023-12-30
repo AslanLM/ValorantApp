@@ -21,3 +21,20 @@ html{
   font-family: ValFont;
   src: url(fonts/ValorantFont.ttf);
 }
+
+@font-face {
+  font-family: Tungsten;
+  src: url(fonts/Tungsten-Bold.ttf);
+}
+
+
+button{
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: inherit;
+}

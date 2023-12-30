@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick';
 
-const AgentsNav = ({agents}) => {
+const AgentsNav = ({agents, onSelect }) => {
 
     const settings = {
         dots: false,
@@ -16,10 +16,12 @@ const AgentsNav = ({agents}) => {
       
       <Slider {...settings}>
       {agents.map((agent) => (
-        <div key={agent.uuid} className="slider-agents">
-          <img src={agent.displayIcon} alt={agent.displayName} />
-          
-        </div>
+        <button key={agent.uuid} onClick={() => onSelect(agent.uuid)}> 
+          <div className="slider-agents">
+            <img src={agent.displayIcon} alt={agent.displayName} />
+            
+          </div>
+        </button>
       ))}
     </Slider>
       

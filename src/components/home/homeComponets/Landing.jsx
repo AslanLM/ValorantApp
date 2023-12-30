@@ -57,7 +57,6 @@ const Landing = ({characterId}) => {
     <div className='landing-page' ref={landingRef}>
       <div className='banner'></div>
       <div className='border'></div>
-      <div id='layer' className='border2' data-speed='-5'></div>
       <div className='border-detail'></div>
       <div id='layer' className='title' data-speed='0.5'>
         <h1>vAlorant</h1>

@@ -108,34 +108,6 @@
 }
 
 
-
-.border2{
-    position: absolute;
-    bottom: 0;
-    width: 64%;
-    height: 10vh;
-    z-index: 9;
-}
-
-.border2::before,
-.border2::after {
-    content: '';
-    position: absolute;
-    bottom: 2%;
-    width: 2%;
-    height: 20%;
-    background-color: #fff;
-    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-}
-
-.border2::before {
-    right: -1%; 
-}
-
-.border2::after {
-    left: -1%; 
-}
-
 .banner{
     position: absolute;
     top: 0;

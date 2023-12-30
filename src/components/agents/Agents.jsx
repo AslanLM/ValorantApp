@@ -3,10 +3,15 @@ import './Agents.css'
 import AgentsNav from './agentsComponents/AgentsNav';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import AgentsInfo from './agentsComponents/AgentsInfo';
+import AgentsCards from './agentsComponents/AgentsCards';
+import AgentsAbilities from './agentsComponents/AgentsAbilities';
+import ClipPathVal from '../home/ClipPathVal'
 
 const Agents = () => {
 
   const [ agents, setAgents] = useState([]);
+  const [selectedAgent, setSelectedAgent] = useState(null);
 
 
   useEffect(()=>{
@@ -22,21 +27,39 @@ const Agents = () => {
     fetchData();
   }, [])
 
-  console.log(agents)
+  const handleAgentSelect = (uuid) => {
+    setSelectedAgent(uuid);
+  };
+
 
   return (
     <section className='agents-sc'>
+        {selectedAgent ? (
+          <>
       <div className='agents-sc-content'>
-        <div className='agents-sc-info'></div>
-        <div className='agents-sc-cards'></div>
-        <div className='agents-sc-habilities'></div>
+
+        <AgentsInfo agents={agents} selectedAgent={selectedAgent}/>
+       
+       <AgentsCards agents={agents} selectedAgent={selectedAgent}/> 
+       
+       <AgentsAbilities agents={agents} selectedAgent={selectedAgent} />
+
       </div>
+      </>
+        ) : (
+          <div className='empty-banner'>
+          <ClipPathVal/>
+        </div>
+      )}
       <div className='agents-nav'>
           
-              <AgentsNav  agents={agents}/>
+        <AgentsNav  agents={agents} onSelect={handleAgentSelect}/>
          
       </div>
     </section>
+
+
+    
   )
 }
 
