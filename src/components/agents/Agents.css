@@ -162,6 +162,7 @@
 .agentsabilities-wrap h1{
     font-family: 'Tungsten', serif;
     font-size: 3rem;
+    text-transform: uppercase;
 }
 
 .agentabilities-content{
@@ -184,6 +185,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.4rem;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 .abilities-info img{

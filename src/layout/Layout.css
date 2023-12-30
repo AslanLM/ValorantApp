@@ -26,8 +26,8 @@
   transform: scale(1.2);
 }
 
-.logo path.nav-change{
-  fill: #000;
+.logo path.clicked{
+  fill: #fff;
 }
 
 #navbar{
@@ -85,8 +85,8 @@
 
 #menuButton > div{
   display: flex;
-  background: #fff;
-  height: 2px;
+  background: #000;
+  height: 4px;
   border-radius: 5px;
   transition: transform 0.5s;
   transform-origin: bottom;
@@ -126,9 +126,6 @@
   width: 100%;
 }
 
-#menuButton > .nav-change{
-  background-color: #000;
-}
 
 @media screen and (max-width: 768px) {
   .header {
