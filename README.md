@@ -15,3 +15,7 @@ This is a React application that consumes the Valorant API to display informatio
 ## Authors
 
 - [@AslanLM](https://github.com/AslanLM)
+
+### Appendix 
+
+All visual assets displayed in the app are sourced from the API or created in CSS.
