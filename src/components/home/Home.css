@@ -412,10 +412,6 @@
         transform: rotate(300deg);
     }
 
-    .bg-outside{
-        display: none;
-    }
-
     .home-cont-title h1{
         font-size: 1.5rem;
     }
@@ -456,10 +452,6 @@
         top: 70%;
         height: 108%;
         transform: rotate(64deg);
-    }
-
-    .bg-outside{
-        display: block;
     }
 
     .home-cont-title{
@@ -664,12 +656,6 @@
 
 @media screen and (max-width: 768px){
 
-    .agents,
-    .weapons{
-        background-color: transparent;
-        background: transparent;
-        clip-path: none;
-    }
 
      
     .agt-img1 img,

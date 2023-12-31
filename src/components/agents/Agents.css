@@ -9,7 +9,7 @@
 .agents-sc-content{
     display: flex;
     width: 100%;
-    height: 75%;
+    height: 77%;
     border-bottom: 1px solid #000;
 }
 
@@ -20,7 +20,6 @@
 
 .agents-sc-cards{
     flex: 1.5;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -32,11 +31,13 @@
 }
 
 
+
+
 /* navbar de agents */
 
 .agents-nav{
     width: 90%;
-    height: 25%;
+    height: 23%;
     margin: 0 auto;
     padding: 10px;
 }
@@ -102,6 +103,10 @@
     gap: 1vh;
 }
 
+.agentinfo-role{
+    height: 15%;
+}
+
 .agentinfo-role h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.4rem;
@@ -121,10 +126,11 @@
 }
 
 .agentinfo-descripcion p{
-    text-transform: capitalize;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: lighter;
+    font-weight: 400;
     color: rgba(0, 0, 0, 0.7);
+    text-transform: none;
+    z-index: 10;
 }
 
 
@@ -205,7 +211,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 75%;
+    height: 77%;
     border-bottom: 1px solid #000;
 }
 
@@ -234,10 +240,132 @@
     }
   
 
+@media screen and (max-width: 768px){
+
+    .agents-sc{
+        margin-top: 8vh;
+    }
+    .agents-sc-content{
+        height: 81%;
+        padding: 0 15px;
+    }
+
+    .agents-nav{
+        height: 19%;
+    }
+
+    .slider-agents{
+        height: 18vh;
+    }
+
+    .slider-agents img{
+        width: 16vh;
+    }
+
+    .agentabilities-content{
+        gap: 10%;
+    }
+
+    .abilities-info img{
+        height: 10vh;
+    }
+
+    .abilities-info h2{
+        font-size: 1rem
+    }
+    
+
+}
 
 
+@media screen and (max-width: 480px){
+    .agents-sc-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 0 5px
+    }
+    .agents-sc-info{
+        grid-column: 1;
+        grid-row: 1; 
+    }
 
+    .agents-sc-cards{
+        grid-column: 2;
+        grid-row: 1 / span 2; 
+    }
+    .agents-sc-abilities{
+        grid-column: 1; 
+        grid-row: 2; 
+    }
 
+    .agentcards-banner{
+        height: 88%;
+    }
+    .agentcards-banner img{
+        height: 70vh;
+    }
+
+    .agentinfo-content{
+        justify-content: flex-end;
+        gap: 2.2vh;
+        padding: 2.5%;
+    }
+
+    .agentsabilities-wrap{
+        margin-top: 4vh;
+        justify-content: flex-start;
+        padding: 2.5%;
+    }
+
+    .agentinfo-content h1,
+    .agentsabilities-wrap h1{
+        font-size: 2.2rem;
+        font-weight: lighter;
+    }
+
+    .agentinfo-role h2{
+        font-size: 1.1rem;
+    }
+    .role-content img{
+        height: 15%;
+    }
+
+    .agentinfo-content strong{
+        font-size: 0.9rem;
+    }
+    .agentinfo-descripcion p {
+        font-size: 0.8rem;
+        color: #000;
+    }
+
+    .agentabilities-content {
+        gap: 5%;
+    }
+    
+    .abilities-info h2{
+        font-size: 0.7rem;
+    }
+
+    .abilities-info img {
+        height: 6vh;
+    }
+
+    .slider-agents{
+        height: 14vh;
+    }
+
+    .slider-agents img{
+        width: 12vh;
+    }
+
+    .empty-banner .bg-inside{
+        width: 95%;
+        height: 65%;
+    }
+
+    
+}
 
 
 

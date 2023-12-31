@@ -27,7 +27,7 @@ const Maps = () => {
 
 
   return (
-    <div className='maps-sc'>
+    <section className='maps-sc'>
       <div className='maps-info'>
         <MapsInfo maps={maps} selectedMap={selectedMap}/>
       </div>
@@ -35,7 +35,7 @@ const Maps = () => {
       <div className='maps-sc-content'>
         <MapsContent maps={maps} onSelectMap={(uuid) => setSelectedMap(uuid)}/>
       </div>
-  </div>
+  </section>
   )
 }
 

@@ -26,10 +26,11 @@
 }
 
 .maps-info p{
-    text-transform: capitalize;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: lighter;
-    color: rgba(0, 0, 0, 0.7)
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: none;
 }
 
 
@@ -72,7 +73,94 @@
 .icon-map img{
     height: 20vh;
     width: auto;
-    z-index: 2;
+}
+
+.slider-map span{
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px){
+    .maps-sc{
+        flex-direction: column-reverse;
+    }
+
+    .slider-map{
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .maps-sc-content{
+        padding: 10vh;
+        padding-bottom: 0;
+    }
+
+    .maps-info{
+        height: 20%;
+        width: 100%;
+    }
+
+    .maps-info-content{
+        flex-direction: row;
+        align-items: center;
+        gap: 2.2vh;
+    }
+
+    .icon-map{
+        right: -5.3%
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .maps-sc{
+        height: 95vh;
+        margin-top: 10vh;
+    }
+    .maps-sc-content{
+        padding: 0;
+    }
+
+    .slider-map{
+        height: 50vh;
+    }
+
+    .slider-map img{
+        height: 28vh;
+    }
+
+    .icon-map{
+        right: -5%
+    }
+
+    .icon-map img{
+        height: 10vh;
+    }
+
+    .maps-info{
+        flex: 1;
+        height: auto;
+    }
+
+    .maps-info h1{
+        font-size: 2.5rem;
+        font-weight: lighter;
+    }
+
+    .maps-info p{
+        font-size: 0.8rem;
+        color: #000;
+    }
+
+    .slider-map span{
+        display: block;
+    }
 }
 
 

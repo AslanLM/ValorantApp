@@ -22,7 +22,7 @@ const Weapons = () => {
   }, [])
 
   return (
-    <div className='weapons-sc'>
+    <section className='weapons-sc'>
       <div className='weapons-info'>
         <h1>Choose your <span>weapon</span></h1>
         <p>Creativity is your greastest weapon</p>
@@ -31,7 +31,7 @@ const Weapons = () => {
       <div className='weapons-sc-content'>
       <WeaponsContent weapons={weapons} />
       </div>
-    </div>
+    </section>
   )
 }
 

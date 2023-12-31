@@ -19,6 +19,7 @@ const MapsContent = ({maps, onSelectMap}) => {
         {maps.map((map) => (
             <div key={map.uuid} className="slider-map" onMouseOver={() => onSelectMap(map.uuid)}>         
                     <img src={map.splash} alt={map.displayName} />
+                    <span>Double click on the <br/>image to see the info</span>
                     <div className='icon-map'>
                     {map.displayIcon && <img src={map.displayIcon} alt={map.displayName} />}
                     </div>

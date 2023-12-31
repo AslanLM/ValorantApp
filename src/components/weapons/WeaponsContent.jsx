@@ -8,7 +8,21 @@ const WeaponsContent = ({weapons}) => {
         infinite: true,
         speed: 500,
         slidesToShow: 4,  
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 400,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+        ]
       };
 
   return (

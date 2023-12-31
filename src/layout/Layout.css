@@ -1,6 +1,5 @@
 .header {
   background-color: transparent;
-  color: #fff;
   height: 60px;
   width: 100%;
   display: flex;
@@ -8,7 +7,7 @@
   justify-content: space-around;
   align-items: center;
   gap: 40%;
-  position: fixed;
+  position: absolute;
   top: 0;
   z-index: 999;
   transform: translateY(0);
@@ -101,11 +100,11 @@
 }
   
 #menuButton:hover div:first-child{
-  transform: translateY(5px);
+  transform: scale(1.1);
 }
   
 #menuButton:hover div:last-child{
-  transform: translateY(-5px);
+  transform: scale(1.1);
 }
   
 #menuButton.clicked{
@@ -128,13 +127,14 @@
 
 @media screen and (max-width: 768px) {
   .header {
-      gap: 0;
-      padding: 10px; 
+      gap: 20%;
+      padding-top: 20px;
+       
   }
 
   #navbar li {
-      font-size: 1.5rem; 
-      padding: 0; 
+      font-size: 3.5rem;
+      padding-left: 15px;
   }
 }
 
@@ -152,12 +152,13 @@
   bottom: 0;
   width: 100%;
   height: 50px;
-  line-height: 20px;
+  line-height: 10px;
   text-align: center;
   justify-content: center;
-  font-size: 0.9rem;
-  padding-top: 20px;
+  padding-top: 15px;
   border-top: 3px solid black;
   background-color: #212022;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.9rem;
   color: #fff;
 }

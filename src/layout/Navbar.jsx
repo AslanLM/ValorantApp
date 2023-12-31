@@ -15,6 +15,13 @@ const Navbar = () => {
     setClicked(false)
   }
 
+  useEffect(() => {
+    document.body.style.overflow = clicked ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [clicked]);
+
 
   return (
     <header id="header" className='header'>
