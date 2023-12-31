@@ -1,8 +1,17 @@
-# React + Vite
+# Valorant Info App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React application that consumes the Valorant API to display information about agents, maps, and weapons in the gam
 
-Currently, two official plugins are available:
+##Api Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Valorant Api](https://valorant-api.com/)
+
+## Features
+
+- Agents List: Displays a list of Valorant agents with details about each one.
+- Maps List: Presents information about the available maps in Valorant.
+- Weapons List: Provides details about the weapons available in the game.
+
+## Authors
+
+- [@AslanLM](https://github.com/AslanLM)

@@ -162,3 +162,7 @@
   font-size: 0.9rem;
   color: #fff;
 }
+
+.footer a:hover{
+  color: rgb(255, 48, 64);
+}
