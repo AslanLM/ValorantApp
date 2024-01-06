@@ -2,6 +2,10 @@
 
 This is a React application that consumes the Valorant API to display information about agents, maps, and weapons in the gam
 
+## Website
+
+[Valorant App](https://aslanlm.github.io/ValorantApp/)
+
 ## Api Link
 
 [Valorant Api](https://valorant-api.com/)
