@@ -8,9 +8,9 @@ This is a React application that consumes the Valorant API to display informatio
 
 ## Features
 
-- Agents List: Displays a list of Valorant agents with details about each one.
-- Maps List: Presents information about the available maps in Valorant.
-- Weapons List: Provides details about the weapons available in the game.
+- **Agents List:** Displays a list of Valorant agents with details about each one.
+- **Maps List:** Presents information about the available maps in Valorant.
+- **Weapons List:** Provides details about the weapons available in the game.
 
 ## Authors
 
