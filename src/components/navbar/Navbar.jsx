@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import "./Layout.css";
+import "./Navbar.css";
 
 const Navbar = () => {
 
@@ -65,6 +65,11 @@ const Navbar = () => {
           <li>
             <NavLink to="/weapons" onClick={handleClickedLinks}>
               Weapons
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="https://github.com/AslanLM/ValorantApp" target="_blank" onClick={handleClickedLinks}>
+              Github
             </NavLink>
           </li>
         </ul>

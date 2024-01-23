@@ -1,22 +1,19 @@
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import './App.css'
 import MainRouter from './router/MainRouter'
-import Navbar from './layout/Navbar'
-import Footer from './layout/Footer'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
 
   return (
     <>
-   <BrowserRouter> {/*IMPORTANTE AGREGAR basename='/ValorantApp' ANTES DE DESPLEGAR QUE NO SE TE OLVIDE */}
+   <HashRouter> {/*IMPORTANTE AGREGAR basename='/ValorantApp' ANTES DE DESPLEGAR QUE NO SE TE OLVIDE */}
 
    <Navbar/>
 
    <MainRouter />
-
-   <Footer/>
    
-   </BrowserRouter>
+   </HashRouter>
    </>
   )
 }

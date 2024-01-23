@@ -45,6 +45,10 @@ body {
   src: url(fonts/Tungsten-Bold.ttf);
 }
 
+img{
+  object-position: center;
+}
+
 
 button{
   background: none;
