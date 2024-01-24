@@ -7,11 +7,17 @@ const Navbar = () => {
   const isHome = location.pathname === "/" || location.pathname === "/home";
 
   const navbarStyle = {
-    backgroundColor: isHome ? "#fff" : "#FF3040",
-    fill: isHome ? "#fff" : "#FF3040",
+    backgroundColor: isHome ? "#fff" : "#ff3040",
+    fill: isHome ? "#fff" : "#ff3040",
   };
 
+  const navbarColor ={
+    color: isHome ? "#fff" : "#ff3040",
+  }
+
   const [clicked, setClicked] = useState(false);
+  const [menuButton, setMenuButton] = useState({ display: "none" });
+  const [navbar, setNavbar] = useState({display: "flex"});
 
   const handleClicked = () => {
     setClicked((prevClicked) => !prevClicked);
@@ -21,12 +27,25 @@ const Navbar = () => {
     setClicked(false);
   };
 
+  const handleResize = () => {
+    if (window.innerWidth <= 768) {
+      setMenuButton({ display: "flex" });
+      setNavbar({display: "none"})
+      
+    } else {
+      setMenuButton({ display: "none" });
+      setNavbar({display: "flex"});
+    }
+  };
+
   useEffect(() => {
-    document.body.style.overflow = clicked ? "hidden" : "auto";
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      document.body.style.overflow = "auto";
+      window.removeEventListener("resize", handleResize);
     };
-  }, [clicked]);
+  }, [clicked, setMenuButton, setNavbar]);
 
   return (
     <header id="header" className="header">
@@ -48,16 +67,54 @@ const Navbar = () => {
         </Link>
       </div>
 
+      <nav className="navbar" style={{ ...navbar, ...navbarColor }}>
+        <ul >
+          <li>
+            <NavLink to="/home" onClick={handleClickedLinks}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/agents" onClick={handleClickedLinks}>
+              Agents
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/maps" onClick={handleClickedLinks}>
+              Maps
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/weapons" onClick={handleClickedLinks}>
+              Weapons
+            </NavLink>
+          </li>
+          <li>
+            <Link to="https://github.com/AslanLM/ValorantApp" target="_blank" onClick={handleClickedLinks}>
+              Github
+            </Link>
+            <style>
+                {`
+                  .navbar a::before {
+                    background-color: ${isHome ? "#fff" : "#ff3040"};
+                  }
+                `}
+              </style>
+          </li>
+        </ul>
+      </nav>
+
       <button
         id="menuButton"
         className={clicked ? "clicked" : ""}
         onClick={handleClicked}
+        style={menuButton}
       >
         <div style={navbarStyle}></div>
         <div style={navbarStyle}></div>
       </button>
 
-      <nav id="navbar" style={{ display: clicked ? "flex" : "none" }}>
+      <nav className="navbar-responsive" style={{ display: clicked ? "flex" : "none" }}>
         <ul>
           <li>
             <NavLink to="/home" onClick={handleClickedLinks}>
