@@ -12,10 +12,6 @@
   z-index: 999;
   transform: translateY(0);
   }
-  
-.scrolled{
-  background-color: rgba(0, 0, 0, 0.9);
-}
 
 .logo{
     z-index: 10;
@@ -26,7 +22,7 @@
 }
 
 .logo path.clicked{
-  fill: #fff;
+  fill: #fff !important;
 }
 
 #navbar{
@@ -84,7 +80,6 @@
 
 #menuButton > div{
   display: flex;
-  background: #000;
   height: 4px;
   border-radius: 5px;
   transition: transform 0.5s;
