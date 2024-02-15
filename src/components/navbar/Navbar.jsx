@@ -50,7 +50,7 @@ const Navbar = () => {
   return (
     <header id="header" className="header">
       <div className="logo">
-        <Link to="/" onClick={handleClickedLinks}>
+        <Link to="/" aria-label="home" onClick={handleClickedLinks}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

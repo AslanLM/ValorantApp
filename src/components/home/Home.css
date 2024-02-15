@@ -124,13 +124,13 @@
     position: absolute;
     top: -10%;
     left: 14%;
+    width: 200vh;
     z-index: 10;
 }
 
 .img-banner img{
     height: 100%;
-    width: 200vh;
-
+    width: 100%;
 }
 
 .img-banner2{
